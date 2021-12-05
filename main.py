@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import json
+from user import User
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    #print_hi('PyCharm')
+    with open("database.json") as d:
+        data = json.load(d)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print(data)
+    # print(data['users'])
+    # print(data['users']['5'])
+    # print(data['users']['5']['fName'])
+    u1 = User()
+    print(u1)
+    u1.create_from_dict(data['users']['5'])
+    print(u1)
