@@ -13,12 +13,9 @@ class UserRepositoryJson(UserRepository):
 
     def load(self):
         users_list = load_from_file(self.db_file_name)
-        for b in users_list['users']:
-            # user = user(b["title"], b["subtitle"], b["authors"],
-            #         b["isbn"], b["publisher"], b["year"], b["price"], b["genre"], b["tags"], b["description"])
-            # user.id = b["id"]
+        for u in users_list['users']:
             user = User()
-            user.create_from_dict(b)
+            user.create_from_dict(u)
             # print(user)
             self.insert(user)
 
