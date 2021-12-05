@@ -28,3 +28,7 @@ class UserRepository:
 
     def count(self):
         return len(self.users)
+
+    def print_all(self):
+        for user in self.users:
+            print(self.users[user])
