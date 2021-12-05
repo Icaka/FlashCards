@@ -1,5 +1,5 @@
 class FlashCard:
-    def __init__(self, _id, side1, side2):
+    def __init__(self, _id=None, side1=None, side2=None):
         self.id = _id
         self.side1 = side1
         self.side2 = side2
