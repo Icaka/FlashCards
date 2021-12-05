@@ -13,9 +13,9 @@ if __name__ == '__main__':
 
     print(data)
 
-    repo_json = UserRepositoryJson()
-    repo_json.load()
-
+    users_json = UserRepositoryJson()
+    users_json.load()
+    users_json.print_all()
     cards = FlashCardRepositoryJson()
     cards.load()
-    cards.print_all()
+    # cards.print_all()

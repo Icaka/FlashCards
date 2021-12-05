@@ -3,12 +3,16 @@
       {
         "id": 5,
         "fName": "ivan",
-        "lName": "draganov"
+        "lName": "draganov",
+        "username": "vanko",
+        "pass": "edno"
       },
       {
         "id": 10,
         "fName": "ico",
-        "lName": "yes"
+        "lName": "yes",
+        "username": "ico",
+        "pass": "yaya"
       }
   ],
 

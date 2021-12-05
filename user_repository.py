@@ -12,6 +12,15 @@ class UserRepository:
     def find_by_id(self, id):
         return self.users[id]
 
+    def find_by_username(self, user_name):
+        for u in self.users.values():
+            if u.user_name == user_name:
+                return u
+        return None
+
+    # def find_by_password(self, password):
+    #     return self.users[password]
+
     def insert(self, user):
         # user.id = self.__class__.get_next_id()
         self.users[user.id] = user
