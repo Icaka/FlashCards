@@ -26,4 +26,3 @@ class UserRepositoryJson(UserRepository):
 def load_from_file(filename):
     with open(filename, "rt") as f:
         return json.load(f)
-    
