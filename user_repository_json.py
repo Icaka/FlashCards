@@ -19,7 +19,16 @@ class UserRepositoryJson(UserRepository):
             # print(user)
             self.insert(user)
 
+    # def persist(self):
+    #     save_to_file('database1.json', self.users)
+
 
 def load_from_file(filename):
     with open(filename, "rt") as f:
         return json.load(f)
+
+
+def save_to_file(filename, users):
+    """Save books data to JSON file"""
+    with open(filename, "wt") as f:
+        json.dump(users, f, indent=4)

@@ -9,7 +9,7 @@ from flash_card_repository import FlashCardRepository
 from flash_card_repository_json import FlashCardRepositoryJson
 
 
-class System:
+class UserController:
     def __init__(self, user_repository: UserRepository):
         self.name = 'system'
         self.currently_logged = False
@@ -25,9 +25,11 @@ class System:
             return False
         if user.password == password:
             self.currently_logged = True
-            self.currently_logged_user.create_from_dict(u)
+            self.currently_logged_user = user
+            # self.currently_logged_user.create_from_dict(u)
         return self.currently_logged
 
     def register(self, user_reg: UserRegistration):
-        new_user = User(UserRepository.get_next_id(), **user_reg)
-#         TODO
+        new_user = User(UserRepository.get_next_id(), user_reg.f_name, user_reg.l_name, user_reg.user_name, user_reg.password)
+        self.user_repository.insert(new_user)
+#
