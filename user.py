@@ -1,3 +1,4 @@
+from card_representation import CardRepresentation
 class User:
 
     def __init__(self, _id=None, fName=None, lName=None, user_name=None, password=None):
@@ -6,6 +7,7 @@ class User:
         self.lName = lName
         self.user_name = user_name
         self.password = password
+        self.cardsInfo: list(CardRepresentation) = []
 
     def __str__(self):
         return f"{self.id}: {self.fName} {self.lName} -- {self.user_name}, {self.password}"
