@@ -18,12 +18,10 @@ class UserRepository:
                 return u
         return None
 
-    # def find_by_password(self, password):
-    #     return self.users[password]
-
     def insert(self, user):
-        # user.id = self.__class__.get_next_id()
+        user.id = self.__class__.get_next_id()
         self.users[user.id] = user
+
         return user
 
     def update(self, user):

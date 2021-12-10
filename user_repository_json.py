@@ -19,8 +19,9 @@ class UserRepositoryJson(UserRepository):
             # print(user)
             self.insert(user)
 
-    # def persist(self):
-    #     save_to_file('database1.json', self.users)
+    def persist(self):
+        new_users = list(map(lambda u: u.to_json(), self.users.values()))
+        save_to_file('database1.json', new_users)
 
 
 def load_from_file(filename):

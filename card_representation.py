@@ -12,7 +12,6 @@ class CardRepresentation:
 
     def __str__(self):
         return f'{self.id}: {self.tries}, {self.success}'
-    # def __init__(self, _id: int, tries: int, success: int):
-    #     self.id = _id
-    #     self.tries = tries
-    #     self.success = success
+
+    def to_json(self):
+        return self.__dict__

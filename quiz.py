@@ -9,13 +9,14 @@ from user_controller import UserController
 
 
 class Quiz:
-    def __init__(self, logged_user: User, quiz_set: list(FlashCard)):
+    def __init__(self, logged_user: User, quiz_set):
         self.logged_user = logged_user
         self.quiz_set = quiz_set
         self.successful_guesses = 0
 
     def iterate_quiz(self):
         for c in self.quiz_set:
+            print(c.side1)
             user_guess = input('Enter your guess: ')
             if self.logged_user.guess_flash_card(c, user_guess):
                 print('T')

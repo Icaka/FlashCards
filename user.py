@@ -54,3 +54,8 @@ class User:
     def print_tried_cards(self):
         for c in self.cardsInfo:
             print(c)
+
+    def to_json(self):
+        temp = self.__dict__
+        temp['cardsInfo'] = list(map(lambda c: c.to_json(), self.cardsInfo))
+        return temp

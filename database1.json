@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "fName": "ivan",
+        "lName": "draganov",
+        "user_name": "vanko",
+        "password": "edno",
+        "cardsInfo": []
+    },
+    {
+        "id": 2,
+        "fName": "ico",
+        "lName": "yes",
+        "user_name": "ico",
+        "password": "yaya",
+        "cardsInfo": []
+    },
+    {
+        "id": 3,
+        "fName": "toni",
+        "lName": "toni",
+        "user_name": "ton",
+        "password": "ton",
+        "cardsInfo": []
+    },
+    {
+        "id": 4,
+        "fName": "koce",
+        "lName": "koce",
+        "user_name": "koce",
+        "password": "koce",
+        "cardsInfo": [
+            {
+                "id": 15,
+                "tries": 2,
+                "success": 1
+            },
+            {
+                "id": 20,
+                "tries": 1,
+                "success": 1
+            }
+        ]
+    }
+]
