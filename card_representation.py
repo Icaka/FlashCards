@@ -15,3 +15,8 @@ class CardRepresentation:
 
     def to_json(self):
         return self.__dict__
+
+    def create_from_dict(self, data):
+        id = data['id']
+        tries = data['tries']
+        success = data['success']

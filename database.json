@@ -4,16 +4,37 @@
         "id": 1,
         "fName": "ivan",
         "lName": "draganov",
-        "username": "vanko",
-        "pass": "edno"
+        "user_name": "vanko",
+        "password": "edno",
+        "cardsInfo": []
       },
       {
         "id": 2,
         "fName": "ico",
         "lName": "yes",
-        "username": "ico",
-        "pass": "yaya"
-      }
+        "user_name": "ico",
+        "password": "yaya",
+        "cardsInfo": []
+      },
+      {
+        "id": 3,
+        "fName": "koce",
+        "lName": "koce",
+        "user_name": "koce",
+        "password": "koce",
+        "cardsInfo": [
+            {
+                "id": 15,
+                "tries": 2,
+                "success": 1
+            },
+            {
+                "id": 20,
+                "tries": 1,
+                "success": 1
+            }
+        ]
+    }
   ],
 
   "flash_cards": [

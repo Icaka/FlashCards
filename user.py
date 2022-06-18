@@ -19,8 +19,13 @@ class User:
         self.id = data['id']
         self.fName = data['fName']
         self.lName = data['lName']
-        self.user_name = data['username']
-        self.password = data['pass']
+        self.user_name = data['user_name']
+        self.password = data['password']
+
+        for c in data['cardsInfo']:
+            card = CardRepresentation(0, 0, 0)
+            card.create_from_dict(c)
+            self.cardsInfo.append(card)
 
     def add_card_info(self, card_representation: CardRepresentation):
         self.cardsInfo.append(card_representation)

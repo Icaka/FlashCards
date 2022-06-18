@@ -33,25 +33,25 @@ if __name__ == '__main__':
     # quiz_c.quiz_on_current_set()
     # user1.print_tried_cards()
 
-    card1 = FlashCard(15, 'good', 'dog')
-    card2 = FlashCard(20, 'bad', 'cat')
-    user1 = User(10, 'koce', 'koce', 'koce', 'koce')
-    # print(user1)
-    user1.guess_flash_card(card1, 'dog')
-    # user1.print_tried_cards()
-    user1.guess_flash_card(card1, 'boy')
-    # user1.print_tried_cards()
-    user1.guess_flash_card(card2, 'cat')
-    # user1.print_tried_cards()
-
-    reg_toni = UserRegistration('toni', 'toni', 'ton', 'ton')
-    syst = UserController(users_json)
-    syst.register(reg_toni)
-
-    users_json.insert(user1)
-    users_json.print_all()
-
-    users_json.persist()
+    # card1 = FlashCard(15, 'good', 'dog')
+    # card2 = FlashCard(20, 'bad', 'cat')
+    # user1 = User(10, 'koce', 'koce', 'koce', 'koce')
+    # # print(user1)
+    # user1.guess_flash_card(card1, 'dog')
+    # # user1.print_tried_cards()
+    # user1.guess_flash_card(card1, 'boy')
+    # # user1.print_tried_cards()
+    # user1.guess_flash_card(card2, 'cat')
+    # # user1.print_tried_cards()
+    #
+    # reg_toni = UserRegistration('toni', 'toni', 'ton', 'ton')
+    # syst = UserController(users_json)
+    # syst.register(reg_toni)
+    #
+    # users_json.insert(user1)
+    # users_json.print_all()
+    #
+    # users_json.persist()
 
     # users_json.persist()
     # cards.print_all()
