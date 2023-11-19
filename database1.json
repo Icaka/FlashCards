@@ -17,14 +17,6 @@
     },
     {
         "id": 3,
-        "fName": "toni",
-        "lName": "toni",
-        "user_name": "ton",
-        "password": "ton",
-        "cardsInfo": []
-    },
-    {
-        "id": 4,
         "fName": "koce",
         "lName": "koce",
         "user_name": "koce",
@@ -41,5 +33,21 @@
                 "success": 1
             }
         ]
+    },
+    {
+        "id": 4,
+        "fName": "joe",
+        "lName": "benson",
+        "user_name": "jj",
+        "password": "12345",
+        "cardsInfo": []
+    },
+    {
+        "id": 51,
+        "fName": "dany",
+        "lName": "torrance",
+        "user_name": "dan51",
+        "password": "42red",
+        "cardsInfo": []
     }
 ]

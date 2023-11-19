@@ -23,8 +23,9 @@ class User:
         self.password = data['password']
 
         for c in data['cardsInfo']:
-            card = CardRepresentation(0, 0, 0)
-            card.create_from_dict(c)
+            card = CardRepresentation(c['id'], c['tries'], c['success'])
+            # card.create_from_dict(c)
+            # print(f'cardRep: {card}')
             self.cardsInfo.append(card)
 
     def add_card_info(self, card_representation: CardRepresentation):

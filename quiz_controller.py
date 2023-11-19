@@ -31,7 +31,7 @@ class QuizController:
         for c in self.quiz_set:
             print(c)
 
-    def quiz_on_current_set(self):
+    def quiz_on_current_set(self):  # where the actual quiz happens (for now)
         current_quiz = Quiz(self.logged_user, self.quiz_set)
         current_quiz.iterate_quiz()
 

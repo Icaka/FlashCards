@@ -2,6 +2,7 @@ import json
 from user import User
 from user_repository import UserRepository
 from user_repository_json import UserRepositoryJson
+from icecream import ic
 
 from flash_card import FlashCard
 from flash_card_repository import FlashCardRepository
@@ -17,13 +18,14 @@ if __name__ == '__main__':
     with open("database.json") as d:
         data = json.load(d)
 
-    print(data)
+    # print(data)
+    # ic(data)
 
     users_json = UserRepositoryJson()
     users_json.load()
-    users_json.print_all()
-    # cards = FlashCardRepositoryJson()
-    # cards.load()
+    # users_json.print_all()
+    cards = FlashCardRepositoryJson()
+    cards.load()
     # cards.print_all()
 
     # user1 = User(10, 'koce', 'koce', 'koce', 'koce')
@@ -52,6 +54,11 @@ if __name__ == '__main__':
     # users_json.print_all()
     #
     # users_json.persist()
-
-    # users_json.persist()
+    user_test = User(None, 'joe', 'benson', 'jj', '12345')
+    user_test2 = User(51, 'dany', 'torrance', 'dan51', '42red')
+    users_json.print_all()
+    users_json.insert(user_test)
+    users_json.insert(user_test2)
+    users_json.print_all()
+    users_json.persist()
     # cards.print_all()

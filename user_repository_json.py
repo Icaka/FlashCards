@@ -2,6 +2,7 @@ import json
 
 from user import User
 from user_repository import UserRepository
+from icecream import ic
 
 DEFAULT_USERS_DB_FILE = "database.json"
 
@@ -12,12 +13,13 @@ class UserRepositoryJson(UserRepository):
         self.db_file_name = filename
 
     def load(self):
-        users_list = load_from_file(self.db_file_name)
-        for u in users_list['users']:
+        users_list = load_from_file(self.db_file_name)['users']  # load_from_file() returns the whole json db
+        for u in users_list:
             user = User()
             user.create_from_dict(u)
             # print(user)
             self.insert(user)
+        # ic(self.users)
 
     def persist(self):
         new_users = list(map(lambda u: u.to_json(), self.users.values()))
@@ -30,6 +32,6 @@ def load_from_file(filename):
 
 
 def save_to_file(filename, users):
-    """Save books data to JSON file"""
+    """Save users data to JSON file"""
     with open(filename, "wt") as f:
         json.dump(users, f, indent=4)

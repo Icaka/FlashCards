@@ -3,6 +3,8 @@ from flash_card import FlashCard
 from flash_card_repository import FlashCardRepository
 from flash_card_repository_json import FlashCardRepositoryJson
 
+# represents the way the user will store personal info(tries and successes) about a specific card in the db
+
 
 @dataclass
 class CardRepresentation:
@@ -17,6 +19,7 @@ class CardRepresentation:
         return self.__dict__
 
     def create_from_dict(self, data):
+        # print(f'data: {data}')
         id = data['id']
         tries = data['tries']
         success = data['success']

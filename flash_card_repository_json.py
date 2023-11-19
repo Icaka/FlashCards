@@ -17,7 +17,6 @@ class FlashCardRepositoryJson(FlashCardRepository):
 
             card = FlashCard()
             card.create_from_dict(c)
-            # print(user)
             self.insert(card)
 
 
