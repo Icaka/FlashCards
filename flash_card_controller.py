@@ -8,5 +8,5 @@ class FlashCardController:
         self.flash_repo = flash_repository
 
     def create_card(self, side_1, side_2):
-        new_card = FlashCard(FlashCardRepository.get_next_id(), side_1, side_2)
+        new_card = FlashCard(None, side_1, side_2)  # FlashCardRepository.get_next_id()
         self.flash_repo.insert(new_card)

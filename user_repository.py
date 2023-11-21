@@ -24,7 +24,7 @@ class UserRepository:
 
     def insert(self, user: User):
         temp_id = 0
-        print(f'inserting  {user}')
+        # print(f'inserting  {user}')
         if user.id is None:  # case for when a user is added manually and has no id yet
             temp_id = self.__class__.get_next_id()
         else:  # this case is for when the users are read from the db

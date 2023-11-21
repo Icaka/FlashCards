@@ -30,6 +30,6 @@ class UserController:
         return self.currently_logged
 
     def register(self, user_reg: UserRegistration):
-        new_user = User(0, user_reg.f_name, user_reg.l_name, user_reg.user_name, user_reg.password)
+        new_user = User(None, user_reg.f_name, user_reg.l_name, user_reg.user_name, user_reg.password)
         self.user_repository.insert(new_user)
 #
