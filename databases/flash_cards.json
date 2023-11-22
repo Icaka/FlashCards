@@ -1,0 +1,32 @@
+[
+    {
+        "id": 4,
+        "side1": "dog",
+        "side2": "hund"
+    },
+    {
+        "id": 3,
+        "side1": "pizza",
+        "side2": "hut"
+    },
+    {
+        "id": 5,
+        "side1": "house",
+        "side2": "das Haus"
+    },
+    {
+        "id": 6,
+        "side1": "ambulance",
+        "side2": "krankenwagen"
+    },
+    {
+        "id": 1,
+        "side1": "red",
+        "side2": "rot"
+    },
+    {
+        "id": 15,
+        "side1": "fear",
+        "side2": "angst"
+    }
+]

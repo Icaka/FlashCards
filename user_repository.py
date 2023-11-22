@@ -1,5 +1,5 @@
 from user import User
-from icecream import ic
+# from icecream import ic
 
 
 class UserRepository:

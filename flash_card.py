@@ -11,3 +11,6 @@ class FlashCard:
         self.id = data['id']
         self.side1 = data['side1']
         self.side2 = data['side2']
+    
+    def to_json(self):
+        return self.__dict__

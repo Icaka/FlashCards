@@ -2,9 +2,10 @@ import json
 
 from user import User
 from user_repository import UserRepository
-from icecream import ic
+# from icecream import ic
 
 DEFAULT_USERS_DB_FILE = "database.json"
+DEFAULT_USERS_DB_SAVE_FILE = "databases/users.json"
 
 
 class UserRepositoryJson(UserRepository):
@@ -23,7 +24,7 @@ class UserRepositoryJson(UserRepository):
 
     def persist(self):
         new_users = list(map(lambda u: u.to_json(), self.users.values()))
-        save_to_file('database1.json', new_users)
+        save_to_file(DEFAULT_USERS_DB_SAVE_FILE, new_users)
 
 
 def load_from_file(filename):
