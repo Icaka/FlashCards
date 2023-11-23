@@ -13,6 +13,7 @@ from user_controller import UserController
 from user_registration import UserRegistration
 
 from quiz_controller import QuizController
+from flash_card_factory import FlashCardFactory
 
 if __name__ == '__main__':
     with open("database.json") as d:
@@ -26,12 +27,14 @@ if __name__ == '__main__':
     # users_json.print_all()
     cards = FlashCardRepositoryJson()
     cards.load()
-    card1 = FlashCard(None, 'red', 'rot')
-    card2 = FlashCard(15, 'fear', 'angst')
-    cards.insert(card1)
-    cards.insert(card2)
+    # card1 = FlashCard(None, 'red', 'rot')
+    # card2 = FlashCard(15, 'fear', 'angst')
+    # cards.insert(card1)
+    # cards.insert(card2)
+    card_factory = FlashCardFactory(cards)
+    card_factory.create_bulk_cards()
     cards.persist()
-    # cards.print_all()
+    cards.print_all()
 
     # user1 = User(10, 'koce', 'koce', 'koce', 'koce')
     # quiz_c = QuizController(cards, user1)

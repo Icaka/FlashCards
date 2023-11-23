@@ -21,12 +21,27 @@
     },
     {
         "id": 1,
-        "side1": "red",
-        "side2": "rot"
+        "side1": "give",
+        "side2": "geben"
     },
     {
-        "id": 15,
-        "side1": "fear",
-        "side2": "angst"
+        "id": 2,
+        "side1": "happy",
+        "side2": "glucklig"
+    },
+    {
+        "id": 7,
+        "side1": "blue",
+        "side2": "blau"
+    },
+    {
+        "id": 8,
+        "side1": "one",
+        "side2": "eins"
+    },
+    {
+        "id": 9,
+        "side1": "ex",
+        "side2": "ex"
     }
 ]

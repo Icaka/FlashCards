@@ -1,5 +1,6 @@
 from flash_card import FlashCard
 
+
 class FlashCardRepository:
     next_id = 0
 
