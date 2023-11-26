@@ -14,6 +14,7 @@ from user_registration import UserRegistration
 
 from quiz_controller import QuizController
 from flash_card_factory import FlashCardFactory
+from interface.main_app import MainApp
 
 if __name__ == '__main__':
     with open("database.json") as d:
@@ -31,10 +32,10 @@ if __name__ == '__main__':
     # card2 = FlashCard(15, 'fear', 'angst')
     # cards.insert(card1)
     # cards.insert(card2)
-    card_factory = FlashCardFactory(cards)
-    card_factory.create_bulk_cards()
-    cards.persist()
-    cards.print_all()
+    # card_factory = FlashCardFactory(cards)
+    # card_factory.create_bulk_cards()
+    # cards.persist()
+    # cards.print_all()
 
     # user1 = User(10, 'koce', 'koce', 'koce', 'koce')
     # quiz_c = QuizController(cards, user1)
@@ -69,4 +70,8 @@ if __name__ == '__main__':
     users_json.insert(user_test2)
     users_json.print_all()
     users_json.persist()
+
+    user_control = UserController(users_json)
+    main_app = MainApp(user_control)
+    main_app.mainloop()
     # cards.print_all()
