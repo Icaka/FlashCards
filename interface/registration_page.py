@@ -54,8 +54,11 @@ class RegistrationPage(tk.Frame):
         nick = self.nick_entry.get()
         password = self.pass_entry.get()
         new_user_reg = UserRegistration(fname, lname, nick, password)
-        self.u_controller.register(new_user_reg)
-        pass
+        if self.u_controller.register(new_user_reg):
+            messagebox.showinfo('Registration', 'Registration success')
+            return True
+        messagebox.showinfo('Registration', 'Registration failed')
+        return False
 
     def back_to_login(self):
         from interface.login_page import LoginPage

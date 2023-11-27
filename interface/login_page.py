@@ -32,6 +32,8 @@ class LoginPage(tk.Frame):
         text2 = self.en2.get()
         if self.u_controller.login(text1, text2):
             messagebox.showinfo("Login", f"button clicked {text1} {text2}, login successful")
+            from interface.home_page import HomePage
+            self.switch_view(HomePage)
         else:
             messagebox.showinfo("Login", f"button clicked {text1} {text2}, login fail")
         pass

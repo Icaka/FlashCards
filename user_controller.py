@@ -30,7 +30,15 @@ class UserController:
         # self.currently_logged_user.create_from_dict(u)
         return self.currently_logged
 
+    def logout(self):
+        # self.currently_logged_user = User()
+        self.currently_logged = False
+
     def register(self, user_reg: UserRegistration):
+        if not user_reg.f_name or not user_reg.l_name:
+            return False
+        if self.user_repository.find_by_username(user_reg.user_name):
+            return False
         new_user = User(None, user_reg.f_name, user_reg.l_name, user_reg.user_name, user_reg.password)
         self.user_repository.insert(new_user)
         return True
