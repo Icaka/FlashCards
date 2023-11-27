@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 from user_controller import UserController
 from interface.login_page import LoginPage
+from interface.registration_page import RegistrationPage
 
 WIN_WIDTH = 400
 WIN_HEIGHT = 400

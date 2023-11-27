@@ -23,13 +23,18 @@ class UserController:
         user: User = self.user_repository.find_by_username(user_name)
         if user is None:
             return False
-        if user.password == password:
-            self.currently_logged = True
-            self.currently_logged_user = user
-            # self.currently_logged_user.create_from_dict(u)
+        if user.password != password:
+            return False
+        self.currently_logged = True
+        self.currently_logged_user = user
+        # self.currently_logged_user.create_from_dict(u)
         return self.currently_logged
 
     def register(self, user_reg: UserRegistration):
         new_user = User(None, user_reg.f_name, user_reg.l_name, user_reg.user_name, user_reg.password)
         self.user_repository.insert(new_user)
+        return True
+
+    def print_all_users(self):
+        self.user_repository.print_all()
 #

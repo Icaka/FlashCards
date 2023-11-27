@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from user_controller import UserController
+from interface.registration_page import RegistrationPage
 
 
 class LoginPage(tk.Frame):
@@ -22,6 +23,9 @@ class LoginPage(tk.Frame):
 
         self.login_button = tk.Button(self, text="Log in", command=self.login)
         self.login_button.grid(row=3)
+
+        self.reg_button = tk.Button(self, text='Register', command=lambda: self.switch_view(RegistrationPage))
+        self.reg_button.grid(row=4)
 
     def login(self):
         text1 = self.en1.get()
