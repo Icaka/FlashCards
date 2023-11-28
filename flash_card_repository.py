@@ -15,6 +15,12 @@ class FlashCardRepository:
     def find_by_id(self, id):
         return self.flash_cards[id]
 
+    def find_by_side_1(self, side_1: str):
+        for card in self.flash_cards:
+            if self.flash_cards[card].side1 == side_1:
+                return True
+        return False
+
     def insert(self, flash_card: FlashCard):
         # flash_card.id = self.__class__.get_next_id()
         if flash_card.id is None or flash_card.id in self.flash_cards:

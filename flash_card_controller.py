@@ -8,6 +8,10 @@ class FlashCardController:
         self.flash_repo = flash_repository
 
     def create_card(self, side_1, side_2):
+        if not side_1.strip() or not side_2.strip():
+            return False
+        if self.flash_repo.find_by_side_1(side_1):
+            return False
         new_card = FlashCard(None, side_1, side_2)  # FlashCardRepository.get_next_id()
         self.flash_repo.insert(new_card)
         return True

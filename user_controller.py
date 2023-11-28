@@ -16,6 +16,10 @@ class UserController:
         self.currently_logged_user = User()
         self.user_repository = user_repository
 
+    def get_currently_logged_user(self):
+        if self.currently_logged is False:
+            return None
+        return self.currently_logged_user
     # def start(self):
     #     if not self.currently_logged:
 
@@ -35,7 +39,7 @@ class UserController:
         self.currently_logged = False
 
     def register(self, user_reg: UserRegistration):
-        if not user_reg.f_name.strip() or not user_reg.l_name.strip():
+        if not user_reg.f_name.strip() or not user_reg.l_name.strip():  # checking for empty input
             return False
         if self.user_repository.find_by_username(user_reg.user_name):
             return False

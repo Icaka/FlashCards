@@ -45,4 +45,3 @@ class CardCreationPage(tk.Frame):
 
     def print_cards(self):
         self.card_controller.print_all_cards()
-
