@@ -6,7 +6,7 @@ from user_registration import UserRegistration
 
 
 class RegistrationPage(tk.Frame):
-    def __init__(self, master, switch_view, u_controller: UserController):
+    def __init__(self, master, switch_view, u_controller: UserController, cards_controller):
         super().__init__(master)
         self.switch_view = switch_view
         self.u_controller = u_controller

@@ -10,3 +10,7 @@ class FlashCardController:
     def create_card(self, side_1, side_2):
         new_card = FlashCard(None, side_1, side_2)  # FlashCardRepository.get_next_id()
         self.flash_repo.insert(new_card)
+        return True
+
+    def print_all_cards(self):
+        self.flash_repo.print_all()

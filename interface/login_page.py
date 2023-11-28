@@ -5,10 +5,11 @@ from interface.registration_page import RegistrationPage
 
 
 class LoginPage(tk.Frame):
-    def __init__(self, master, switch_view, u_controller):
+    def __init__(self, master, switch_view, u_controller, card_controller):
         super().__init__(master)
         self.switch_view = switch_view
         self.u_controller: UserController = u_controller
+        self.card_controller = card_controller
         # master.title("Login")
 
         self.login_label = tk.Label(self, text="Login Page")

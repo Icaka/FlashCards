@@ -31,11 +31,11 @@ class UserController:
         return self.currently_logged
 
     def logout(self):
-        # self.currently_logged_user = User()
+        self.currently_logged_user = User()
         self.currently_logged = False
 
     def register(self, user_reg: UserRegistration):
-        if not user_reg.f_name or not user_reg.l_name:
+        if not user_reg.f_name.strip() or not user_reg.l_name.strip():
             return False
         if self.user_repository.find_by_username(user_reg.user_name):
             return False

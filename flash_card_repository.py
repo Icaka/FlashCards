@@ -40,6 +40,7 @@ class FlashCardRepository:
         return len(self.flash_cards)
 
     def print_all(self):
+        print('Flash Cards')
         for flash_card in self.flash_cards:
             print(self.flash_cards[flash_card])
             
