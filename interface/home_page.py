@@ -17,8 +17,11 @@ class HomePage(tk.Frame):
         self.card_create_button = tk.Button(self, text='Create Card', command=self.card_create)
 
         self.greeting_label.grid(row=0)
-        self.logout_button.grid(row=1, padx=10)
-        self.card_create_button.grid(row=2, padx=10)
+        self.logout_button.grid(row=1, pady=10)
+        self.card_create_button.grid(row=2, pady=10)
+
+        self.quiz_button = tk.Button(self, text='Quiz Time!', command=self.enter_quiz_page)
+        self.quiz_button.grid(row=3, pady=10)
 
     def logout(self):
         self.u_controller.logout()
@@ -29,3 +32,7 @@ class HomePage(tk.Frame):
     def card_create(self):
         from interface.card_creation_page import CardCreationPage
         self.switch_page(CardCreationPage)
+
+    def enter_quiz_page(self):
+        from interface.quiz_page import QuizPage
+        self.switch_page(QuizPage)

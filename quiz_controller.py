@@ -15,6 +15,9 @@ class QuizController:
         self.logged_user = logged_user
         self.quiz_set: list(FlashCard) = []
 
+    def get_quiz_set(self):
+        return self.quiz_set
+
     def create_set_first_20(self):
         self.quiz_set.clear()
         count = 20

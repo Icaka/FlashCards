@@ -16,7 +16,7 @@ class UserController:
         self.currently_logged_user = User()
         self.user_repository = user_repository
 
-    def get_currently_logged_user(self):
+    def get_currently_logged_user(self) -> User:
         if self.currently_logged is False:
             return None
         return self.currently_logged_user

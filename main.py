@@ -65,10 +65,10 @@ if __name__ == '__main__':
     # users_json.persist()
     user_test = User(None, 'joe', 'benson', 'jj', '12345')
     user_test2 = User(51, 'dany', 'torrance', 'dan51', '42red')
-    users_json.print_all()
+    # users_json.print_all()
     users_json.insert(user_test)
     users_json.insert(user_test2)
-    users_json.print_all()
+    # users_json.print_all()
     users_json.persist()
 
     user_control = UserController(users_json)
