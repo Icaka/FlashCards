@@ -32,7 +32,7 @@ class CardCreationPage(tk.Frame):
         self.print_cards_button.grid(row=4, column=2, pady=20)
 
     def create_card_button(self):
-        side_1 = self.side2_entry.get()
+        side_1 = self.side1_entry.get()
         side_2 = self.side2_entry.get()
         if self.card_controller.create_card(side_1, side_2):
             messagebox.showinfo('creation', 'Card created')

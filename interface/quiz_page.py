@@ -17,16 +17,18 @@ class QuizPage(tk.Frame):
         self.title_label.grid(row=0, columnspan=2, pady=10)
 
         self.start_button = tk.Button(self, text='Start Quiz', command=self.start)
-        self.start_button.grid(row=1, columnspan=2, pady=10)
+        self.start_button.grid(row=1, column=0, columnspan=1, pady=10)
 
-        self.quiz_frame = tk.Frame(self)
+        self.back_button = tk.Button(self, text='Go Back', command=self.go_back)
+        self.back_button.grid(row=1, column=1, columnspan=1, padx=10)
+
 
     def start(self):
-        self.quiz_frame.grid(row=2)
-        # good_guesses = 0
-        label_text='text'
+        self.quiz_frame = tk.Frame(self)
+        self.quiz_frame.grid(row=2, columnspan=2)
+        self.good_guesses = 0
         # entry_var = tk.StringVar(self.quiz_frame, 'text var')
-        self.card_label = tk.Label(self.quiz_frame, text=label_text)
+        self.card_label = tk.Label(self.quiz_frame, text='text')
         self.card_label.grid(row=0, column=0)
         self.guess_entry = tk.Entry(self.quiz_frame)
         self.guess_entry.grid(row=0, column=1)
@@ -61,13 +63,20 @@ class QuizPage(tk.Frame):
             messagebox.showinfo('question', f'side1: {self.current_card.side1}, side2: {self.current_card.side2}')
         else:
             print("Quiz over")
+            messagebox.showinfo('quiz end', f'good guesse: {self.good_guesses}')
+            self.good_guesses = 0
+            self.quiz_frame.destroy()
 
     def check_guess(self):
         guess = self.guess_entry.get().strip()
 
         if guess == self.current_card.side2:
             print('Correct')
+            self.good_guesses += 1
         else:
             print('False')
         self.next_card()
 
+    def go_back(self):
+        from interface.home_page import HomePage
+        self.switch_page(HomePage)
