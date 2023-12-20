@@ -62,7 +62,7 @@ class RegistrationPage(tk.Frame):
 
     def back_to_login(self):
         from interface.login_page import LoginPage
-        print('back lo login BUTTON PRESSED')
+        print('back to login BUTTON PRESSED')
         # messagebox.showinfo('login_button', 'login button pressed')
         self.switch_view(LoginPage)
         pass

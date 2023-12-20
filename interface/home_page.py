@@ -11,7 +11,7 @@ class HomePage(tk.Frame):
         self.u_controller = u_controller
         self.card_controller = card_controller
 
-        self.greeting_label = tk.Label(self, text=f'hello {u_controller.currently_logged_user.user_name}')
+        self.greeting_label = tk.Label(self, text=f'hello {u_controller.currently_logged_user.fName}')
 
         self.logout_button = tk.Button(self, text='Logout', command=self.logout)
         self.card_create_button = tk.Button(self, text='Create Card', command=self.card_create)
