@@ -56,6 +56,7 @@ class User:
         else:
             self.update_card_info(card.id, False)
             return False
+        return False
 
     def print_tried_cards(self):
         for c in self.cardsInfo:

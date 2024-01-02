@@ -38,7 +38,7 @@ class QuizPage(tk.Frame):
         self.quiz_controller.create_set_first_20()
         self.current_quiz = self.quiz_controller.get_quiz_set()
         self.current_card = None
-        print('HERE')
+        # print('HERE')
         self.next_card()
         """
         for question in self.quiz_controller.get_quiz_set():
@@ -63,14 +63,17 @@ class QuizPage(tk.Frame):
             messagebox.showinfo('question', f'side1: {self.current_card.side1}, side2: {self.current_card.side2}')
         else:
             print("Quiz over")
-            messagebox.showinfo('quiz end', f'good guesse: {self.good_guesses}')
+            messagebox.showinfo('quiz end', f'good guesses: {self.good_guesses}')
             self.good_guesses = 0
             self.quiz_frame.destroy()
 
     def check_guess(self):
         guess = self.guess_entry.get().strip()
 
-        if guess == self.current_card.side2:
+        user_guess_res: bool = self.u_controller.currently_logged_user.guess_flash_card(self.current_card, guess)  # so that the user saves info about the current card
+
+        # if guess == self.current_card.side2:
+        if user_guess_res:
             print('Correct')
             self.good_guesses += 1
         else:

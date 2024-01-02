@@ -17,8 +17,8 @@ from flash_card_factory import FlashCardFactory
 from interface.main_app import MainApp
 
 if __name__ == '__main__':
-    with open("database.json") as d:
-        data = json.load(d)
+    # with open("database.json") as d:
+        # data = json.load(d)
 
     # print(data)
     # ic(data)
