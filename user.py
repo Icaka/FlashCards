@@ -10,7 +10,7 @@ class User:
         self.lName = lName
         self.user_name = user_name
         self.password = password
-        self.cardsInfo: list(CardRepresentation) = []   # TODO  also make the quiz
+        self.cardsInfo: list[CardRepresentation] = []   # TODO  also make the quiz
 
     def __str__(self):
         return f"{self.id}: {self.fName} {self.lName} -- {self.user_name}, {self.password}"
@@ -23,8 +23,9 @@ class User:
         self.password = data['password']
 
         for c in data['cardsInfo']:
-            card = CardRepresentation(c['id'], c['tries'], c['success'])
-            # card.create_from_dict(c)
+            # card = CardRepresentation(c['id'], c['tries'], c['success'])
+            card: CardRepresentation = CardRepresentation(0, 0, 0)
+            card.create_from_dict(c)
             # print(f'cardRep: {card}')
             self.cardsInfo.append(card)
 

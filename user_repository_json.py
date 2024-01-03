@@ -6,6 +6,7 @@ from user_repository import UserRepository
 
 DEFAULT_USERS_DB_FILE = "database.json"
 DEFAULT_USERS_DB_SAVE_FILE = "databases/users.json"
+TEST_DB_LOCATION = "databases/users_test.json"
 
 
 class UserRepositoryJson(UserRepository):
@@ -24,7 +25,7 @@ class UserRepositoryJson(UserRepository):
 
     def persist(self):
         new_users = list(map(lambda u: u.to_json(), self.users.values()))
-        save_to_file(DEFAULT_USERS_DB_SAVE_FILE, new_users)
+        save_to_file(TEST_DB_LOCATION, new_users)
 
 
 def load_from_file(filename):

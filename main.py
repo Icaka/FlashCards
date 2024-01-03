@@ -69,10 +69,12 @@ if __name__ == '__main__':
     users_json.insert(user_test)
     users_json.insert(user_test2)
     # users_json.print_all()
-    users_json.persist()
+    # users_json.persist()
 
     user_control = UserController(users_json)
     card_control = FlashCardController(cards)
     main_app = MainApp(user_control, card_control)
     main_app.mainloop()
+    print('main loop closed')
+    users_json.persist()
     # cards.print_all()

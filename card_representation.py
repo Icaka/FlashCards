@@ -20,6 +20,6 @@ class CardRepresentation:
 
     def create_from_dict(self, data):
         # print(f'data: {data}')
-        id = data['id']
-        tries = data['tries']
-        success = data['success']
+        self.id = data['id']
+        self.tries = data['tries']
+        self.success = data['success']
